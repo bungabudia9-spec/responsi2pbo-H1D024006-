@@ -1,16 +1,17 @@
-// Gunakan keyword untuk mewarisi class Karyawan
-class Manajer ... {
-    // Deklarasikan variabel tambahan khusus Manajer (tunjangan)
-    
-    
+package pert3;
+public class Manajer extends Karyawan {
+    private double tunjangan;
+
     // Constructor
-    // Tips: Gunakan 'super' untuk memanggil constructor parent
-    
-    
-    // Method Override tampilInfo
-    // Tips: Tampilkan info dasar, lalu tambahkan info tunjangan dan total gaji
+    public Manajer(String nama, double gajiPokok, double tunjangan) {
+        super(nama, gajiPokok);
+        this.tunjangan = tunjangan;
+    }
+
+    // Override method tampilInfo
     @Override
     void tampilInfo() {
-        
+        System.out.println("Nama: " + nama + " | Gaji Pokok: Rp " + gajiPokok + " | Tunjangan: Rp " + tunjangan);
+        System.out.println("Total Pendapatan: Rp " + (gajiPokok + tunjangan));
     }
 }

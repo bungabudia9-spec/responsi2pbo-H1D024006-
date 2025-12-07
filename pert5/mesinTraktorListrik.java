@@ -1,28 +1,30 @@
-class mesinTraktorListrik extends mesinTraktor {
-    // Variabel khusus mesin traktor listrik (kapasitasBaterai)
+package pert5;
+public class mesinTraktorListrik extends mesinTraktor {
+    protected double kapasitasBaterai;
 
-    // Constructor
-    mesinTraktorListrik(String nama, int hp, double tarik, double baterai) {
-        super(nama, hp, tarik);
+    public mesinTraktorListrik(String nama, int hp, double kapasitasTarik, double kapasitasBaterai) {
+        super(nama, hp, kapasitasTarik);
+        this.kapasitasBaterai = kapasitasBaterai;
     }
 
     @Override
-    void tampilInfo() {
-        // Override info traktor listrik
+    public void tampilInfo() {
+        System.out.println("Mesin Traktor Listrik " + namaMesin + " | Tarik: " + kapasitasTarik +
+                " ton | Baterai: " + kapasitasBaterai + " kWh | Tenaga: " + tenagaHP + " HP");
     }
 
     @Override
-    double nilaiPerforma() {
-        // Override performa traktor listrik
+    public double nilaiPerforma() {
+        return (tenagaHP * 1.1) + (kapasitasBaterai * 5);
     }
 
     @Override
-    String kategoriMesin() {
-        // Override kategori listrik
+    public String kategoriMesin() {
+        return "Mesin Traktor Listrik";
     }
 
     @Override
-    void suaraMesin() {
-        // Suara traktor listrik
+    public void suaraMesin() {
+        System.out.println("Bzzzzz! Mesin traktor listrik aktif!");
     }
 }

@@ -1,22 +1,28 @@
-class defaultMesin {
-    // Variabel umum mesin (namaMesin, tenagaHP)
+package pert5;
+
+public class defaultMesin {
+    // Variabel umum mesin
+    protected String namaMesin;
+    protected int tenagaHP;
 
     // Constructor
-    defaultMesin(String nama, int hp) {
-
+    public defaultMesin(String namaMesin, int tenagaHP) {
+        this.namaMesin = namaMesin;
+        this.tenagaHP = tenagaHP;
     }
 
-    void tampilInfo() {
-        // Tampilkan info dasar mesin
+    // Method menampilkan info dasar mesin
+    public void tampilInfo() {
+        System.out.println("Mesin " + namaMesin + " | Tenaga: " + tenagaHP + " HP");
     }
 
-    double nilaiPerforma() {
-        // Hitung performa dasar
-        return 0.0;
+    // Method menghitung performa standar
+    public double nilaiPerforma() {
+        return tenagaHP * 1.0;
     }
 
-    String kategoriMesin() {
-        // Kategori default
-        return "";
+    // Method kategori default
+    public String kategoriMesin() {
+        return "Mesin Umum";
     }
 }

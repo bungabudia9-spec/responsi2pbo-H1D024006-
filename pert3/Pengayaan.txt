@@ -8,3 +8,19 @@ Setelah menyelesaikan kode, jawab pertanyaan berikut:
 5. Mengapa kita perlu menggunakan Inheritance? Apa keuntungan utamanya dibandingkan membuat dua class yang terpisah sama sekali (misal class Karyawan dan class Manajer dibuat terpisah tanpa hubungan)?
 
 Jawaban:
+
+1. Fungsi keyword 'extends'
+extends digunakan agar suatu class menjadi subclass dari class lain, sehingga mewarisi atribut dan method dari parent class.
+
+2. Perbedaan Method Overloading vs Overriding
+Overloading: satu class punya beberapa method nama sama tapi parameter berbeda.
+Overriding: subclass mengubah perilaku method parent dengan nama dan parameter yang sama.
+
+3. Kegunaan keyword 'super'
+super dipakai di constructor subclass untuk memanggil constructor parent sehingga atribut dasar dari parent bisa langsung diinisialisasi.
+
+4. Jika variabel parent jadi private
+Jika atribut di Karyawan private, subclass Manajer tidak bisa mengakses langsung. Solusinya pakai getter/setter atau ubah ke protected.
+
+5. Kenapa perlu Inheritance
+Inheritance membuat kode lebih terstruktur dan hemat, karena subclass bisa pakai ulang atribut dan method parent, tidak perlu menulis ulang kode yang sama.
